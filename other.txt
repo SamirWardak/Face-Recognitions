@@ -10,11 +10,11 @@ jupyter-client
 jupyter-core
 jedi
 nest-asyncio
-parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
-prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1633440160888/work
-Pygments @ file:///opt/conda/conda-bld/pygments_1644249106324/work
-python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
-six @ file:///tmp/build/80754af9/six_1644875935023/work
-traitlets @ file:///tmp/build/80754af9/traitlets_1636710298902/work
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1631814937681/work
-zipp @ file:///opt/conda/conda-bld/zipp_1641824620731/work
+parso
+prompt-toolkit
+Pygments
+python-dateutil
+six
+traitlets
+typing-extensions
+zipp
