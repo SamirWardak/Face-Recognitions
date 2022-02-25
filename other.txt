@@ -1,15 +1,15 @@
-argcomplete @ file:///tmp/build/80754af9/argcomplete_1618920853202/work
-colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
-debugpy @ file:///C:/ci/debugpy_1637091911212/work
-decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
-importlib-metadata @ file:///C:/ci/importlib-metadata_1638543113403/work
-ipykernel @ file:///C:/ci/ipykernel_1633527406033/work/dist/ipykernel-6.4.1-py3-none-any.whl
-ipython @ file:///C:/ci/ipython_1643800131373/work
-ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
-jupyter-client @ file:///opt/conda/conda-bld/jupyter_client_1643638337975/work
-jupyter-core @ file:///C:/ci/jupyter_core_1636537209059/work
-jedi @ file:///C:/ci/jedi_1644297241925/work
-nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1613680548246/work
+argcomplete
+colorama
+debugpy
+decorator
+importlib-metadata
+ipykernel
+ipython
+ipython-genutils
+jupyter-client
+jupyter-core
+jedi
+nest-asyncio
 parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
 prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1633440160888/work
 Pygments @ file:///opt/conda/conda-bld/pygments_1644249106324/work
