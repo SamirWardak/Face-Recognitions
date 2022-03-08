@@ -5,7 +5,7 @@ import tempfile
 
 st.title("Face Recognination  Application")
 
-source_of_content = st.sidebar.selectbox('The the Source of Input', options=['<select>',  'Image', 'Video'])
+source_of_content = st.sidebar.selectbox('The the Source of Input', options=['<select>',  'WebCam', 'Image', 'Video'])
 add_new_face = st.sidebar.checkbox('Add New Face')
 FRAME_WINDOW = st.image([])
 
