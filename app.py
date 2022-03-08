@@ -5,7 +5,7 @@ import tempfile
 
 st.title("Face Recognination  Application")
 
-source_of_content = st.sidebar.selectbox('The the Source of Input', options=['<select>', 'WebCam', 'Image', 'Video'])
+source_of_content = st.sidebar.selectbox('The the Source of Input', options=['<select>',  'Image', 'Video'])
 add_new_face = st.sidebar.checkbox('Add New Face')
 FRAME_WINDOW = st.image([])
 
@@ -63,32 +63,30 @@ if source_of_content == 'WebCam':
         cv2.waitKey(1)
 
 elif source_of_content == 'Image':
-    face_from_image = st.file_uploader("Upload an image to recognize the face", type=["jpg", "jpeg", "png"],
-                                       key='for Images')
+    face_from_image = st.file_uploader("Upload an image to recognize the face", type=["jpg", "jpeg", "png"], key='for Images')
     if face_from_image:
         img = face_recognition.load_image_file(face_from_image)
         faceCurrFrame = face_recognition.face_locations(img)
         encodings_curret_frame = face_recognition.face_encodings(img, faceCurrFrame)
-
         for encodeFace, faceLoc in zip(encodings_curret_frame, faceCurrFrame):
             matches = face_recognition.compare_faces(encoding, encodeFace)
 
             face_distance = face_recognition.face_distance(encoding, encodeFace)
             matchIndex = np.argmin(face_distance)
 
-        if matches[matchIndex]:
-            name = classNames[matchIndex].upper()
-            colors = (0, 255, 0)
-        else:
-            name = 'No Match'
-            colors = (0, 0, 255)
-        y1, x2, y2, x1 = faceLoc
+            if matches[matchIndex]:
+                name = classNames[matchIndex].upper()
+                colors = (0, 255, 0)
+            else:
+                name = 'No Match'
+                colors = (0, 0, 255)
+            y1, x2, y2, x1 = faceLoc
 
-        cv2.rectangle(img, (x1, y1), (x2, y2), colors, 2)
-        cv2.rectangle(img, (x1, y2 - 30), (x2, y2), colors, cv2.FILLED)
-        cv2.putText(img, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX, 0.75, (255, 255, 255), 2)
+            cv2.rectangle(img, (x1, y1), (x2, y2), colors, 2)
+            cv2.rectangle(img, (x1, y2 - 30), (x2, y2), colors, cv2.FILLED)
+            cv2.putText(img, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX, 0.75, (255, 255, 255), 2)
 
-        st.image(img, caption=f"detected Image", use_column_width=True)
+            st.image(img, caption=f"detected Image {name}", use_column_width=True)
 
 
 elif source_of_content == 'Video':
