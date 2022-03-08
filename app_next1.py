@@ -70,7 +70,7 @@ if authentication_status:
                 name = 'Not found found!!!'
                 if matches[matchIndex]:
                     name = classNames[matchIndex].upper()
-                    face = cv2.imread(f'temp_store/{name}.jpg')
+                    face = cv2.imread(f'temp_store/{classNames[matchIndex]}.jpg')
                     face = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
                     face = cv2.resize(face, (300, 400), None, .25, .25)
                     image = np.hstack((img, face))

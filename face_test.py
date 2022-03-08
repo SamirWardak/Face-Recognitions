@@ -41,7 +41,7 @@ while True:
             name = 'Not found found!!!'
             if matches[matchIndex]:
                 name = classNames[matchIndex].upper()
-                face = cv2.imread(f'temp_store/{name}.jpg')
+                face = cv2.imread(f'temp_store/{classNames[matchIndex]}.jpg')
                 face = cv2.resize(face, (300, 400), None, .25, .25)
                 image = np.hstack((img, face))
                 name = 'Name: ' + classNames[matchIndex].upper()
