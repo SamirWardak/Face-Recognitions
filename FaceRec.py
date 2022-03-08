@@ -43,7 +43,7 @@ def set_up():
     encoding = find_encodings(images)
     print('Encodings Created')
 
-    for f in os.listdir(path):
-        os.remove(os.path.join(path, f))
+    # for f in os.listdir(path):
+    #     os.remove(os.path.join(path, f))
 
     return classNames, encoding

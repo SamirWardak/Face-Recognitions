@@ -6,3 +6,4 @@ face-recognition-models==0.3.0
 numpy==1.21.5
 opencv-python==4.2.0.34
 streamlit==1.5.1
+streamlit-authenticator
