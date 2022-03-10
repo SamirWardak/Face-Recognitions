@@ -93,7 +93,7 @@ if authentication_status:
     
         cv2.putText(img, name_detected, (20, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 2)
     
-        FRAME_WINDOW.image(np.hstack((img, frame)))
+        FRAME_WINDOW.image(np.vstack((img, frame)))
         cv2.waitKey(1)
 elif authentication_status == False:
     st.error('Username/password is incorrect')
